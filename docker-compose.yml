@@ -1,0 +1,15 @@
+version: "3.5"
+
+services:
+
+  ubuntu:
+    container_name: ${PROJECT}-ubuntu
+    hostname: ${PROJECT}-ubuntu
+    restart: always
+    build: ./ubuntu
+    image: ${CORP}/${PROJECT}-ubuntu
+    stdin_open: true
+    tty: true
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
